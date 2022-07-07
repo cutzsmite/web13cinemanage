@@ -121,7 +121,6 @@ searchBar.addEventListener("click", (e) => {
 //search movie
 
 searchMovie.addEventListener('change', (e) => {
-  renderMovie.re
   let data = dataMovie.filter((movie) => movie.name.includes(e.target.value))
   // const htmlData = data.map((movie) => renderMovie.innerHTML += `<li>${movie.name}</li>`)
   // console.log(htmlData)
@@ -135,8 +134,6 @@ searchMovie.addEventListener('change', (e) => {
 })
 
 deleteSearch.addEventListener('click', (e) => {
-  searchMovie.value = ""
-  while (renderMovie.hasChildNodes()) {
-    renderMovie.removeChild(renderMovie.firstChild)
-  }
+  console.log('123')
+  renderMovie.innerHTML += ""
 })

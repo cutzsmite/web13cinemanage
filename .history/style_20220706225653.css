@@ -267,7 +267,6 @@ p.text span{
 
 #search{
   position: relative;
-  cursor: pointer;
 }
 
 #searchBar{
@@ -275,6 +274,7 @@ p.text span{
   top: 0;
   right: -370px;
   width: 350px;
+  cursor: pointer;
 }
 
 #searchBar input{
@@ -284,18 +284,4 @@ p.text span{
 
 .hidden{
   display: none;
-}
-
-#renderMovie{
-  position: absolute;
-  top: 20px;
-  right: -370px;
-  width: 350px;
-}
-
-#deleteSearch{
-  position: absolute;
-  top: 0px;
-  right: -60px;
-  width: 50px;
 }

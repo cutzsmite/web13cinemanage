@@ -135,8 +135,5 @@ searchMovie.addEventListener('change', (e) => {
 })
 
 deleteSearch.addEventListener('click', (e) => {
-  searchMovie.value = ""
-  while (renderMovie.hasChildNodes()) {
-    renderMovie.removeChild(renderMovie.firstChild)
-  }
+  renderMovie.removeChild()
 })

@@ -265,37 +265,13 @@ p.text span{
 
 }
 
-#search{
+.search{
   position: relative;
-  cursor: pointer;
 }
 
-#searchBar{
+.searchBar{
   position: absolute;
   top: 0;
-  right: -370px;
-  width: 350px;
-}
-
-#searchBar input{
-  width: 100%;
-
-}
-
-.hidden{
-  display: none;
-}
-
-#renderMovie{
-  position: absolute;
-  top: 20px;
-  right: -370px;
-  width: 350px;
-}
-
-#deleteSearch{
-  position: absolute;
-  top: 0px;
-  right: -60px;
-  width: 50px;
+  right: -190px;
+  width: 400px;
 }

@@ -286,16 +286,9 @@ p.text span{
   display: none;
 }
 
-#renderMovie{
+.renderMovie{
   position: absolute;
   top: 20px;
   right: -370px;
   width: 350px;
-}
-
-#deleteSearch{
-  position: absolute;
-  top: 0px;
-  right: -60px;
-  width: 50px;
 }

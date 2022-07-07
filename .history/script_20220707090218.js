@@ -121,22 +121,12 @@ searchBar.addEventListener("click", (e) => {
 //search movie
 
 searchMovie.addEventListener('change', (e) => {
-  renderMovie.re
   let data = dataMovie.filter((movie) => movie.name.includes(e.target.value))
-  // const htmlData = data.map((movie) => renderMovie.innerHTML += `<li>${movie.name}</li>`)
-  // console.log(htmlData)
-
-  data.forEach((movie) => {
-    const node = document.createElement('li')
-    const textNode = document.createTextNode(movie.name)
-    node.appendChild(textNode)
-    renderMovie.appendChild(node)
-  })
+  const htmlData = data.map((movie) => renderMovie.innerHTML += `<li>${movie.name}</li>`)
+  console.log(htmlData)
+  // renderMovie.innerHTML += htmlData
 })
 
 deleteSearch.addEventListener('click', (e) => {
-  searchMovie.value = ""
-  while (renderMovie.hasChildNodes()) {
-    renderMovie.removeChild(renderMovie.firstChild)
-  }
+  renderMovie.innerHTML += ""
 })

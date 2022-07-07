@@ -293,9 +293,9 @@ p.text span{
   width: 350px;
 }
 
-#deleteSearch{
+.deleteSearch{
   position: absolute;
   top: 0px;
-  right: -60px;
+  right: -370px;
   width: 50px;
 }

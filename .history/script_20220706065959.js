@@ -1,19 +1,3 @@
-let dataMovie = [
-  {
-    name: 'MichealKenKo'
-  },
-  {
-    name: 'Donchee'
-  },
-  {
-    name: 'THC Farm'
-  },
-  {
-    name: 'D3mon666'
-  },
-]
-
-
 //home page section
 
 
@@ -26,11 +10,6 @@ const seats = document.querySelectorAll(".row .seat:not(.sold)");
 const count = document.getElementById("count");
 const total = document.getElementById("total");
 const movieSelect = document.getElementById("movie");
-const search = document.getElementById('search')
-const searchBar = document.getElementById('searchBar')
-const searchMovie = document.getElementById('searchMovie')
-const renderMovie = document.getElementById('renderMovie')
-const deleteSearch = document.getElementById('deleteSearch')
 
 populateUI();
 
@@ -100,43 +79,3 @@ container.addEventListener("click", (e) => {
 
 // Initial count and total set
 updateSelectedCount();
-
-//appear hidden searchBar
-
-search.addEventListener("click", (e) => {
-  // if (searchBar.classList.contains('hidden')) {
-  //   searchBar.classList.remove('hidden')
-  // } else {
-  //   searchBar.classList.add('hidden')
-  // }
-
-  searchBar.classList.toggle('hidden')
-  renderMovie.classList.toggle('hidden')
-})
-
-searchBar.addEventListener("click", (e) => {
-  e.stopPropagation()
-})
-
-//search movie
-
-searchMovie.addEventListener('change', (e) => {
-  renderMovie.re
-  let data = dataMovie.filter((movie) => movie.name.includes(e.target.value))
-  // const htmlData = data.map((movie) => renderMovie.innerHTML += `<li>${movie.name}</li>`)
-  // console.log(htmlData)
-
-  data.forEach((movie) => {
-    const node = document.createElement('li')
-    const textNode = document.createTextNode(movie.name)
-    node.appendChild(textNode)
-    renderMovie.appendChild(node)
-  })
-})
-
-deleteSearch.addEventListener('click', (e) => {
-  searchMovie.value = ""
-  while (renderMovie.hasChildNodes()) {
-    renderMovie.removeChild(renderMovie.firstChild)
-  }
-})

@@ -30,7 +30,6 @@ const search = document.getElementById('search')
 const searchBar = document.getElementById('searchBar')
 const searchMovie = document.getElementById('searchMovie')
 const renderMovie = document.getElementById('renderMovie')
-const deleteSearch = document.getElementById('deleteSearch')
 
 populateUI();
 
@@ -120,23 +119,9 @@ searchBar.addEventListener("click", (e) => {
 
 //search movie
 
-searchMovie.addEventListener('change', (e) => {
-  renderMovie.re
+searchMovie.addEventListener('input', (e) => {
   let data = dataMovie.filter((movie) => movie.name.includes(e.target.value))
-  // const htmlData = data.map((movie) => renderMovie.innerHTML += `<li>${movie.name}</li>`)
-  // console.log(htmlData)
-
-  data.forEach((movie) => {
-    const node = document.createElement('li')
-    const textNode = document.createTextNode(movie.name)
-    node.appendChild(textNode)
-    renderMovie.appendChild(node)
-  })
-})
-
-deleteSearch.addEventListener('click', (e) => {
-  searchMovie.value = ""
-  while (renderMovie.hasChildNodes()) {
-    renderMovie.removeChild(renderMovie.firstChild)
-  }
+  const htmlData = data.map((movie) => renderMovie.innerHTML += `<li>${movie.name}</li>`)
+  console.log(htmlData)
+  // renderMovie.innerHTML += htmlData
 })
